@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className = {styles.app}>
+        <h1>Learn React </h1>
       <Card>
         <Form/>
       </Card>
