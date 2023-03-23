@@ -58,9 +58,6 @@ jobs:
       PUBLIC_URL: https://d1jwlxx7lougvg.cloudfront.net/apps/pre-arrivals
       REACT_APP_ENV_ENVIRONMENT: stage
       REACT_APP_ENV_API_BASE_URL: https://devtest0.kipsu.com/acct/api/v3/
-      REACT_APP_SERVER_INJECTED_GUID: "{{ guid }}"
-      REACT_APP_SERVER_INJECTED_MOBILE: "{{ mobile }}"
-      REACT_APP_SERVER_INJECTED_CONSENT: "{{ consent }}"
     steps:
       - run:
           name: A stage API key should be set for the project
@@ -72,9 +69,6 @@ jobs:
       PUBLIC_URL: https://d1jwlxx7lougvg.cloudfront.net/apps/pre-arrivals
       REACT_APP_ENV_ENVIRONMENT: stage
       REACT_APP_ENV_API_BASE_URL: https://devtest0.kipsu.com/acct/api/v3/
-      REACT_APP_SERVER_INJECTED_GUID: "{{ guid }}"
-      REACT_APP_SERVER_INJECTED_MOBILE: "{{ mobile }}"
-      REACT_APP_SERVER_INJECTED_CONSENT: "{{ consent }}"
     steps:
       - run:
           name: A stage API key should be set for the project
@@ -89,9 +83,6 @@ jobs:
       PUBLIC_URL: https://d8zld6nk6y5i2.cloudfront.net/apps/pre-arrivals
       REACT_APP_ENV_ENVIRONMENT: prod
       REACT_APP_ENV_API_BASE_URL: https://secure.kipsu.com/acct/api/v3/
-      REACT_APP_SERVER_INJECTED_GUID: "{{ guid }}"
-      REACT_APP_SERVER_INJECTED_MOBILE: "{{ mobile }}"
-      REACT_APP_SERVER_INJECTED_CONSENT: "{{ consent }}"
     steps:
       - run:
           name: A prod API key should be set for the project
@@ -126,7 +117,7 @@ workflows:
       - build-deploy-prod:
           filters:
             branches:
-              only: master
+              only: main
           context:
             - s3-build
 
